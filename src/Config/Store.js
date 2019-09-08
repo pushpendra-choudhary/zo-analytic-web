@@ -1,7 +1,7 @@
 import {createStore, applyMiddleware} from 'redux';
 import {persistStore, persistReducer,} from 'redux-persist';
 import Storage from 'redux-persist/lib/storage';
-import logger from 'redux-logger';
+// import logger from 'redux-logger';
 import AppReducers from '../Reducers/RootReducer';
 
 let reduxStore;
@@ -14,7 +14,7 @@ const persistConfig = {
   whitelist: ['auth'],
 };
 
-storeMiddleWares.push(logger);
+// storeMiddleWares.push(logger);
 
 const persistedReducer = persistReducer(persistConfig, AppReducers);
 
